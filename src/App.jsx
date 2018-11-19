@@ -16,6 +16,7 @@ import HistoryScreen from './components/HistoryScreen';
 import { HashRouter as Router, Route, Link, Switch, Redirect } from "react-router-dom";
 import NoWalletScreen from './components/NotConnectedScreens/NoWalletScreen';
 import UnsupportedNetwork from './components/NotConnectedScreens/UnsupportedNetwork';
+import PoweredByVolca from './components/common/poweredByVolca';
 import ReactGA from 'react-ga';
 const qs = require('querystring');
 
@@ -39,6 +40,8 @@ class App extends Component {
                 <div>
                   <Header {...this.props} />
                   <NoWalletScreen {...this.props} />
+                <PoweredByVolca style={{ alignSelf: 'flex-end' }} />
+
                 </div>
         );
     }
