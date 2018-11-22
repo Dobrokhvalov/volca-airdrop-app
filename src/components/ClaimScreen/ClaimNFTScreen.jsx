@@ -85,9 +85,9 @@ class ClaimScreen extends Component {
             //     web3
             // });
 
-            const linkClaimed = await eth2air.isLinkClaimedNFT({
+            const linkClaimed = await eth2air.isLinkClaimed({
                 contractAddress: this.state.contractAddress,
-                tokenId: this.state.tokenId,
+                transitPK: this.state.transitPK,
                 web3
             });
 
@@ -201,7 +201,7 @@ class ClaimScreen extends Component {
                     <RetinaImage className="img-responsive" style={styles.tokenIcon} src="https://raw.githubusercontent.com/VolcaTech/eth2-assets/master/images/snark_art.png" />
 
                     <div style={{...styles.amountContainer, lineHeight: "25px"}}>
-                        <span style={{ fontSize: 30, fontFamily: 'Helvetica Bold' }}>Atom #378</span><br />
+                      <span style={{ fontSize: 30, fontFamily: 'Helvetica Bold' }}>Atom #{this.state.tokenId}</span><br />
                         <span style={{ fontSize: 24, fontFamily: 'Helvetica Regular' }}>89 seconds Atomized</span>
                     </div>
                     <div style={styles.formContainer}>
